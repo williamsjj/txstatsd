@@ -38,8 +38,7 @@ setup(
     author="txStatsD Developers",
     url="https://launchpad.net/txstatsd",
     license="MIT",
-    packages=find_packages() + ["twisted.plugins"],
-    scripts=glob("./bin/*"),
+    packages=find_packages(),
     long_description=long_description,
     classifiers=[
         "Development Status :: 4 - Beta",
