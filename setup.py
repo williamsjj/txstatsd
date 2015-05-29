@@ -24,7 +24,6 @@ from glob import glob
 from txstatsd import version
 
 extra_setup_args = {}
-from setuptools.command.install import install
 from setuptools import find_packages
 from setuptools import setup
 
@@ -32,13 +31,7 @@ long_description = """
 Twisted-based implementation of a statsd-compatible server and client.
 """
 
-
-class TxPluginInstaller(install):
-    def run(self):
-        install.run(self)
-
 setup(
-    cmdclass={'install': TxPluginInstaller},
     name="txStatsD",
     version=version.txstatsd,
     description="A network daemon for aggregating statistics",
